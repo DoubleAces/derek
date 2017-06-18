@@ -1,7 +1,11 @@
 {
   "name": "boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dereku Burger website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DoubleAces/derek.git"
+  },
   "main": "index.js",
   "scripts": {
     "server": "nodemon --watch server --exec node -- server/index.js"
