@@ -1,5 +1,6 @@
 import React from 'react';
 import io from 'socket.io-client'
+require('../style/style.css');
 
 const socket = io.connect('http://localhost:3000');
 

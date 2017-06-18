@@ -14,16 +14,16 @@ app.use(webpackMiddleware(compiler, {
 	publicPath: webpackConfig.output.publicPath,
 	noInfo: true
 }));
-app.use(webpackHotMiddleware(compiler));
 
-app.get('/*', (req, res) => {
+app.use(webpackHotMiddleware(compiler));
+app.get('/', (req, res) => {
 	res.set({
 		'Content-Type': 'text/html'
 	});
 	res.sendFile(path.join(__dirname, './index.html'));
 });
 
-db.connect('mongodb://localhost:27017');
+db.connect('mongodb://localhost:27017/derek');
 let server = app.listen(3000, () => console.log('Running on localhost:3000'))
 let io = socket(server);
 

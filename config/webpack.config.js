@@ -26,6 +26,15 @@ module.exports = {
 				test: /\.jsx$/,
 				include: path.join(__dirname, '../client'),
 				loaders: ['react-hot-loader', 'babel-loader']
+			},
+			{
+				test: /\.css/,
+				exclude: /node_modules/,
+				loader: ['style-loader', 'css-loader']
+			},
+			{
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				loader: ['file-loader']
 			}
 		]
 	},
