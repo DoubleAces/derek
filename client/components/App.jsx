@@ -5,6 +5,11 @@ require('../style/base.css');
 require('../style/bootstrap.css');
 require('../style/fonts.css');
 require('../style/flexslider.css');
+require('../scripts/jquery.flexslider-min');
+require('../scripts/jquery.validate.min');
+// require('../scripts/placeholders.min');
+require('../scripts/smooth-scroll');
+require('../scripts/script.js');
 
 const socket = io.connect('http://localhost:3000');
 
