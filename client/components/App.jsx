@@ -1,6 +1,10 @@
 import React from 'react';
 import io from 'socket.io-client';
-require('../style/style.css');
+require('../style/main.css');
+require('../style/base.css');
+require('../style/bootstrap.css');
+require('../style/fonts.css');
+require('../style/flexslider.css');
 
 const socket = io.connect('http://localhost:3000');
 
