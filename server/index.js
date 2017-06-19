@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 db.connect('mongodb://localhost:27017/derek');
-let server = app.listen(3000, () => console.log('Running on localhost:3000'))
+let server = app.listen(3000, () => console.log('Running on localhost:3000'));
 let io = socket(server);
 
 io.sockets.on('connection', newConnection);
