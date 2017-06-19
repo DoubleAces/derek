@@ -6,25 +6,10 @@
 		// Site loader
 		$('.loader-inner').fadeOut();
 		$('.loader').delay(200).fadeOut('slow');
-
 	});
-
-	// Hero resize
-	function mainHeroResize() {
-		$('.main-slider .slides li').css('height', $(window).height());
-	}
-
-	$(function() {
-		mainHeroResize();
-	}),
-	$(window).resize(function() {
-		mainHeroResize();
-	});
-
 
 	// Site navigation setup
-
-	var header = $('.header'),
+	var header = $('<header className="header default">'),
 		pos = header.offset();
 
 	$(window).scroll(function() {
@@ -155,13 +140,17 @@
 	// 			email: true
 	// 		}
 	// 	},
+	//
 	// 	rules: {
 	// 		name: {
 	// 			required: true,
 	// 			minlength: 3
 	// 		}
 	// 	}
+	//
+	//
 	// });
+
 
 })(jQuery);
 
