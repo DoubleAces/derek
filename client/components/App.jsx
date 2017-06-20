@@ -55,7 +55,7 @@ class App extends React.Component {
 						</div>
 						<header className="header default">
 							<div className="left-part">
-								<a className="logo scroll" href="#hero">
+								<a className="logo scroll" ref="scroll" href="#hero">
 									<h2>tasty</h2>
 								</a>
 							</div>
@@ -67,13 +67,13 @@ class App extends React.Component {
 										</a>
 									</div>
 									<ul>
-										<li><a className="scroll" href="#wrapper">Home</a></li>
-										<li><a className="scroll" href="#resto">Resto</a></li>
-										<li><a className="scroll" href="#menu">Menu</a></li>
-										<li><a className="scroll" href="#special">Special</a></li>
-										<li><a className="scroll" href="#reservation">Reservation</a></li>
-										<li><a className="scroll" href="#gallery">Gallery</a></li>
-										<li><a className="scroll" href="#contact">Contact</a></li>
+										<li><a className="scroll" ref="scroll" href="#wrapper">Home</a></li>
+										<li><a className="scroll" ref="scroll" href="#resto">Resto</a></li>
+										<li><a className="scroll" ref="scroll" href="#menu">Menu</a></li>
+										<li><a className="scroll" ref="scroll" href="#special">Special</a></li>
+										<li><a className="scroll" ref="scroll" href="#reservation">Reservation</a></li>
+										<li><a className="scroll" ref="scroll" href="#gallery">Gallery</a></li>
+										<li><a className="scroll" ref="scroll" href="#contact">Contact</a></li>
 									</ul>
 								</nav>
 							</div>

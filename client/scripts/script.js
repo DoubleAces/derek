@@ -9,8 +9,8 @@
 	});
 
 	// Site navigation setup
-	var header = $('<header className="header default">'),
-		pos = header.offset();
+	var header = $('<header className="header default">');
+	var pos = header.offset();
 
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > pos.top + 500 && header.hasClass('default')) {
@@ -23,103 +23,112 @@
 			});
 		}
 	});
-
-	// Scroll to
-	$('a.scroll').smoothScroll({
-		speed: 800,
-		offset: -57
-	});
-
-	// Slider
-	$('.slider').flexslider({
-		animation: 'fade',
-		slideshow: true,
-		directionNav: true,
-		controlNav: false,
-		pauseOnAction: false,
-		animationSpeed: 500
-	});
-
-	$('.review-slider').flexslider({
-		animation: 'slide',
-		slideshow: true,
-		directionNav: true,
-		controlNav: false,
-		pauseOnAction: false,
-		animationSpeed: 500
-	});
-
-
-
-	// Mobile menu
-
-	var mobileBtn = $('.mobile-but');
-	var nav = $('.main-nav ul');
-	var navHeight = nav.height();
-
-	$(mobileBtn).on('click', function() {
-		$('.toggle-mobile-but').toggleClass('active');
-		nav.slideToggle();
-		$('.main-nav li a').addClass('mobile');
-		return false;
-
-
-	});
-
-	$(window).resize(function() {
-		var w = $(window).width();
-		if (w > 320 && nav.is(':hidden')) {
-			nav.removeAttr('style');
-			$('.main-nav li a').removeClass('mobile');
-		}
-
-	});
-
-	$('.main-nav li a').on('click', function() {
-		if ($(this).hasClass('mobile')) {
-			nav.slideToggle();
+	
+	document.addEventListener('DOMContentLoaded', function() {
+		$('a.scroll').smoothScroll({
+			speed: 800,
+			offset: -57
+		});
+		
+		// Slider
+		$('.slider').flexslider({
+			animation: 'fade',
+			slideshow: true,
+			directionNav: true,
+			controlNav: false,
+			pauseOnAction: false,
+			animationSpeed: 500
+		});
+		
+		$('.review-slider').flexslider({
+			animation: 'slide',
+			slideshow: true,
+			directionNav: true,
+			controlNav: false,
+			pauseOnAction: false,
+			animationSpeed: 500
+		});
+		
+		// Mobile menu
+		
+		var mobileBtn = $('.mobile-but');
+		var nav = $('.main-nav ul');
+		var navHeight = nav.height();
+		
+		
+		$(mobileBtn).on('click', function() {
 			$('.toggle-mobile-but').toggleClass('active');
-		}
-
-	});
-
-
-
-	// Append images as css background
-
-	for (var i = 0; i < $('.background-img').length; i++) {
-
-		var path = $('.background-img').eq(i).children('img').attr('src');
-		$('.background-img').eq(i).css('background', 'url("' + path + '")');
-		$('.background-img').eq(i).addClass('parallax');
-		$('.background-img').eq(i).children('img').detach();
-		$('.background-img').eq(i).css('background-position', 'initial');
-
-	}
-
-
-
-
-	// Tabbed content 
-
-	$('.block-tabs li').on('click', function() {
-		if (!$(this).hasClass('active')) {
-			var tabNum = $(this).index();
-			var nthChild = tabNum + 1;
-			$('.block-tabs li.active').removeClass('active');
+			nav.slideToggle();
+			$('.main-nav li a').addClass('mobile');
+			return false;
+			
+			
+		});
+		
+		$(window).resize(function() {
+			var w = $(window).width();
+			if (w > 320 && nav.is(':hidden')) {
+				nav.removeAttr('style');
+				$('.main-nav li a').removeClass('mobile');
+			}
+			
+		});
+		
+		$('.main-nav li a').on('click', function() {
+			if ($(this).hasClass('mobile')) {
+				nav.slideToggle();
+				$('.toggle-mobile-but').toggleClass('active');
+			}
+			
+		});
+		
+		// Tabbed content
+		
+		$('.block-tabs li').on('click', function() {
+			if (!$(this).hasClass('active')) {
+				var tabNum = $(this).index();
+				var nthChild = tabNum + 1;
+				$('.block-tabs li.active').removeClass('active');
+				$(this).addClass('active');
+				$('.block-tab li.active').removeClass('active');
+				$('.block-tab li:nth-child(' + nthChild + ')').addClass('active');
+			}
+		});
+		
+		
+		// Special zoom
+		
+		$('.block-special').on('mouseenter', function() {
+			$(this).closest('.special').find('.block-special').removeClass('active');
 			$(this).addClass('active');
-			$('.block-tab li.active').removeClass('active');
-			$('.block-tab li:nth-child(' + nthChild + ')').addClass('active');
-		}
+		});
+		
+		// Append images as css background
+		
+		// for (var i = 0; i < $('.background-img').length; i++) {
+		//
+		// 	var path = $('.background-img').eq(i).children('img').attr('src');
+		// 	$('.background-img').eq(i).css('background', 'url("' + path + '")');
+		// 	$('.background-img').eq(i).addClass('parallax');
+		// 	$('.background-img').eq(i).children('img').detach();
+		// 	$('.background-img').eq(i).css('background-position', 'initial');
+		//
+		// }
+		
+		
 	});
 
 
-	// Special zoom	
 
-	$('.block-special').on('mouseenter', function() {
-		$(this).closest('.special').find('.block-special').removeClass('active');
-		$(this).addClass('active');
-	});
+	
+
+
+
+
+
+
+
+
 
 
 	// Form validation 
