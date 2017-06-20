@@ -112,6 +112,18 @@ class App extends React.Component {
 							</div>
 						</div>
 					</section>
+					<section className="short-reservation pt-200 pb-250 overlay">
+						<div className="background-img zoom" style={{background: 'url('+ require('../images/5.jpg') + ')'}} />
+						<div className="container">
+							<div className="row">
+								<div className="col-sm-12 text-center front-p">
+									<h1 className="large">make a reservation</h1>
+									<p className="lead white top">Opens 8:00 AM - 10:00 PM, every day of the week </p>
+									<a href="#reservation" className="but scroll">Book a table</a>
+								</div>
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
 		);
