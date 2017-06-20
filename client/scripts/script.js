@@ -6,22 +6,8 @@
 		// Site loader
 		$('.loader-inner').fadeOut();
 		$('.loader').delay(200).fadeOut('slow');
-	});
-
-	// Site navigation setup
-	var header = $('<header className="header default">');
-	var pos = header.offset();
-
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > pos.top + 500 && header.hasClass('default')) {
-			header.fadeOut('fast', function() {
-				$(this).removeClass('default').addClass('switched-header').fadeIn(200);
-			});
-		} else if ($(this).scrollTop() <= pos.top + 500 && header.hasClass('switched-header')) {
-			header.fadeOut('fast', function() {
-				$(this).removeClass('switched-header').addClass('default').fadeIn(100);
-			});
-		}
+		
+		// initializeMap();
 	});
 	
 	document.addEventListener('DOMContentLoaded', function() {
@@ -30,15 +16,30 @@
 			offset: -57
 		});
 		
-		// Slider
-		$('.slider').flexslider({
-			animation: 'fade',
-			slideshow: true,
-			directionNav: true,
-			controlNav: false,
-			pauseOnAction: false,
-			animationSpeed: 500
+		var header = $('.header'),
+			pos = header.offset();
+		
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > pos.top + 500 && header.hasClass('default')) {
+				header.fadeOut('fast', function() {
+					$(this).removeClass('default').addClass('switched-header').fadeIn(200);
+				});
+			} else if ($(this).scrollTop() <= pos.top + 500 && header.hasClass('switched-header')) {
+				header.fadeOut('fast', function() {
+					$(this).removeClass('switched-header').addClass('default').fadeIn(100);
+				});
+			}
 		});
+		
+		// Slider
+		// $('.slider').flexslider({
+		// 	animation: 'fade',
+		// 	slideshow: true,
+		// 	directionNav: true,
+		// 	controlNav: false,
+		// 	pauseOnAction: false,
+		// 	animationSpeed: 500
+		// });
 		
 		$('.review-slider').flexslider({
 			animation: 'slide',
@@ -114,23 +115,12 @@
 		// 	$('.background-img').eq(i).css('background-position', 'initial');
 		//
 		// }
+
+		
 		
 		
 	});
-
-
-
 	
-
-
-
-
-
-
-
-
-
-
 	// Form validation 
 
 	// var reservationForm = $('.reservation-form');
@@ -159,133 +149,107 @@
 	//
 	//
 	// });
-
+	
+	// Map setup
+	function initializeMap() {
+		
+		var styles = [
+				{
+					'featureType': 'administrative',
+					'stylers': [{
+						'visibility': 'on'
+					},
+						{
+							'color': '#757575'
+						},
+						{
+							'weight': .2
+						}
+					
+					]
+				}, {
+					'featureType': 'landscape',
+					'stylers': [{
+						'color': '#dddddd'
+					}, ]
+				}, {
+					'featureType': 'poi',
+					'stylers': [{
+						'visibility': 'off'
+					}]
+				}, {}, {
+					'featureType': 'transit',
+					'stylers': [{
+						'visibility': 'off'
+					}]
+				}, {
+					'featureType': 'water',
+					'stylers': [{
+						'color': '#d5d5d5'
+					},
+						{
+							'visibility': 'simplified'
+						}
+					]
+				}, {
+					'featureType': 'road',
+					'stylers': [{
+						'visibility': 'simplified'
+					},
+						{
+							'color': '#bebebe'
+						},
+						{
+							'weight': .6
+						}
+					]
+				}, {
+					'featureType': 'road',
+					'elementType': 'labels.text.fill',
+					'stylers': [{
+						'visibility': 'on'
+					},
+						{
+							'color': '#999999'
+						}
+					]
+				}
+			
+			],
+			
+			lat = 59.4346968,
+			lng = 24.7711943,
+			
+			customMap = new google.maps.StyledMapType(styles, {
+				name: 'Styled Map'
+			}),
+			mapOptions = {
+				zoom: 14,
+				scrollwheel: false,
+				disableDefaultUI: true,
+				draggable: true,
+				center: new google.maps.LatLng(lat, lng),
+				mapTypeControlOptions: {
+					mapTypeIds: [google.maps.MapTypeId.ROADMAP]
+				}
+			},
+			map = new google.maps.Map(document.getElementById('map'), mapOptions),
+			myLatlng = new google.maps.LatLng(lat, lng),
+			marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map
+			});
+		
+		map.mapTypes.set('map_style', customMap);
+		map.setMapTypeId('map_style');
+		
+		
+		
+		var transitLayer = new google.maps.TransitLayer();
+		transitLayer.setMap(map);
+		
+		
+		
+	}
 
 })(jQuery);
-
-
-
-
-// Map setup 
-
-function initializeMap() {
-
-
-
-	var styles = [
-
-
-
-			{
-				'featureType': 'administrative',
-				'stylers': [{
-					'visibility': 'on'
-				},
-				{
-					'color': '#757575'
-				},
-				{
-					'weight': .2
-				}
-
-				]
-			}, {
-				'featureType': 'landscape',
-				'stylers': [{
-					'color': '#dddddd'
-				}, ]
-			}, {
-				'featureType': 'poi',
-				'stylers': [{
-					'visibility': 'off'
-				}]
-			}, {}, {
-				'featureType': 'transit',
-				'stylers': [{
-					'visibility': 'off'
-				}]
-			}, {
-				'featureType': 'water',
-				'stylers': [{
-					'color': '#d5d5d5'
-				},
-				{
-					'visibility': 'simplified'
-				}
-				]
-			}, {
-				'featureType': 'road',
-				'stylers': [{
-					'visibility': 'simplified'
-				},
-				{
-					'color': '#bebebe'
-				},
-				{
-					'weight': .6
-				}
-				]
-			}, {
-				'featureType': 'road',
-				'elementType': 'labels.text.fill',
-				'stylers': [{
-					'visibility': 'on'
-				},
-				{
-					'color': '#999999'
-				}
-				]
-			}
-
-		],
-
-		lat = 39.148352,
-		lng = -84.443999,
-
-
-
-
-		customMap = new google.maps.StyledMapType(styles, {
-			name: 'Styled Map'
-		}),
-
-
-		mapOptions = {
-			zoom: 14,
-			scrollwheel: false,
-			disableDefaultUI: true,
-			draggable: true,
-			center: new google.maps.LatLng(lat, lng),
-			mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.ROADMAP]
-			}
-		},
-		map = new google.maps.Map(document.getElementById('map'), mapOptions),
-		myLatlng = new google.maps.LatLng(lat, lng),
-
-
-
-
-		marker = new google.maps.Marker({
-			position: myLatlng,
-			map: map,
-			icon: {
-				url: 'img/marker.png',
-				scaledSize: new google.maps.Size(80, 80)
-			}
-		});
-
-
-
-
-	map.mapTypes.set('map_style', customMap);
-	map.setMapTypeId('map_style');
-
-
-
-	var transitLayer = new google.maps.TransitLayer();
-	transitLayer.setMap(map);
-
-
-
-}
