@@ -7,7 +7,7 @@
 		$('.loader-inner').fadeOut();
 		$('.loader').delay(200).fadeOut('slow');
 		
-		// initializeMap();
+		initializeMap();
 	});
 	
 	document.addEventListener('DOMContentLoaded', function() {
@@ -40,6 +40,15 @@
 		// 	pauseOnAction: false,
 		// 	animationSpeed: 500
 		// });
+		//
+		// $('.gallery-slider').flexslider({
+		// 	animation: 'fade',
+		// 	slideshow: true,
+		// 	directionNav: true,
+		// 	controlNav: false,
+		// 	pauseOnAction: false,
+		// 	animationSpeed: 500
+		// });
 		
 		$('.review-slider').flexslider({
 			animation: 'slide',
@@ -51,11 +60,8 @@
 		});
 		
 		// Mobile menu
-		
 		var mobileBtn = $('.mobile-but');
 		var nav = $('.main-nav ul');
-		var navHeight = nav.height();
-		
 		
 		$(mobileBtn).on('click', function() {
 			$('.toggle-mobile-but').toggleClass('active');
@@ -84,7 +90,6 @@
 		});
 		
 		// Tabbed content
-		
 		$('.block-tabs li').on('click', function() {
 			if (!$(this).hasClass('active')) {
 				var tabNum = $(this).index();
@@ -98,7 +103,6 @@
 		
 		
 		// Special zoom
-		
 		$('.block-special').on('mouseenter', function() {
 			$(this).closest('.special').find('.block-special').removeClass('active');
 			$(this).addClass('active');
@@ -115,41 +119,10 @@
 		// 	$('.background-img').eq(i).css('background-position', 'initial');
 		//
 		// }
-
-		
 		
 		
 	});
-	
-	// Form validation 
 
-	// var reservationForm = $('.reservation-form');
-	// reservationForm.validate({
-	// 	validClass: 'valid',
-	// 	errorClass: 'error',
-	// 	errorPlacement: function(error, element) {
-	// 		return true;
-	// 	},
-	// 	onfocusout: function(element, event) {
-	// 		$(element).valid();
-	// 	},
-	// 	rules: {
-	// 		email: {
-	// 			required: true,
-	// 			email: true
-	// 		}
-	// 	},
-	//
-	// 	rules: {
-	// 		name: {
-	// 			required: true,
-	// 			minlength: 3
-	// 		}
-	// 	}
-	//
-	//
-	// });
-	
 	// Map setup
 	function initializeMap() {
 		
@@ -251,5 +224,36 @@
 		
 		
 	}
+	
+	// Form validation 
+
+	// var reservationForm = $('.reservation-form');
+	// reservationForm.validate({
+	// 	validClass: 'valid',
+	// 	errorClass: 'error',
+	// 	errorPlacement: function(error, element) {
+	// 		return true;
+	// 	},
+	// 	onfocusout: function(element, event) {
+	// 		$(element).valid();
+	// 	},
+	// 	rules: {
+	// 		email: {
+	// 			required: true,
+	// 			email: true
+	// 		}
+	// 	},
+	//
+	// 	rules: {
+	// 		name: {
+	// 			required: true,
+	// 			minlength: 3
+	// 		}
+	// 	}
+	//
+	//
+	// });
+	
+
 
 })(jQuery);

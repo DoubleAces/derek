@@ -45,7 +45,7 @@ class App extends React.Component {
 					<section className="hero overlay">
 						<div className="main-slider slider" ref="mainSlider">
 							<ul className="slides">
-								<li className="flex-active-slide" style={{position: 'auto'}}>
+								<li style={{position: 'auto'}}>
 									<div className="background-img zoom parallax" style={{background: 'url('+ require('../images/2.jpg') + ')'}} />
 								</li>
 								<li style={{position: 'auto'}}>
@@ -56,8 +56,10 @@ class App extends React.Component {
 						<header className="header default">
 							<div className="left-part">
 								<a className="logo scroll" ref="scroll" href="#hero">
-									<h2>tasty</h2>
+									<img src={require('../images/logo.png')} />
+									<h2 style={{marginLeft: '13px'}}>Dereku Burger</h2>
 								</a>
+								
 							</div>
 							<div className="right-part">
 								<nav className="main-nav">
@@ -67,24 +69,34 @@ class App extends React.Component {
 										</a>
 									</div>
 									<ul>
-										<li><a className="scroll" ref="scroll" href="#wrapper">Home</a></li>
-										<li><a className="scroll" ref="scroll" href="#resto">Resto</a></li>
-										<li><a className="scroll" ref="scroll" href="#menu">Menu</a></li>
-										<li><a className="scroll" ref="scroll" href="#special">Special</a></li>
-										<li><a className="scroll" ref="scroll" href="#reservation">Reservation</a></li>
-										<li><a className="scroll" ref="scroll" href="#gallery">Gallery</a></li>
-										<li><a className="scroll" ref="scroll" href="#contact">Contact</a></li>
+										<li><a className="scroll" ref="scroll" href="#wrapper">Avaleht</a></li>
+										<li><a className="scroll" ref="scroll" href="#resto">Restoran</a></li>
+										<li><a className="scroll" ref="scroll" href="#menu">Menüü</a></li>
+										<li><a className="scroll" ref="scroll" href="#special">Eripakkumised</a></li>
+										<li><a className="scroll" ref="scroll" href="#reservation">Reserveeri</a></li>
+										<li><a className="scroll" ref="scroll" href="#contact">Kontakt</a></li>
 									</ul>
 								</nav>
 							</div>
 						</header>
+						<div className="inner-hero">
+							<div className="container hero-content">
+								<div className="row">
+									<div className="col-sm-12 text-center">
+										<h1 className="large">Delicious home made burgers</h1>
+										<p className="lead">Making delicious burgers since 2005</p>
+									
+									</div>
+								</div>
+							</div>
+						</div>
 					</section>
 					<section id="resto" className="resto pt-120 pb-120">
 						<div className="container">
 							<div className="row">
 								<div className="col-sm-12 text-center mb-100">
-									<h1 className="title">The restaurant</h1>
-									<p className="beige">Welcome to tasty restaurant</p>
+									<h1 className="title">Dereku Burger</h1>
+									<p className="beige">Welcome to Dereku Burger</p>
 								</div>
 							</div>
 						</div>
@@ -113,7 +125,7 @@ class App extends React.Component {
 						</div>
 					</section>
 					<section className="short-reservation pt-200 pb-250 overlay">
-						<div className="background-img zoom" style={{background: 'url('+ require('../images/5.jpg') + ')'}} />
+						<div className="background-img zoom" style={{background: 'url('+ require('../images/2.jpg') + ')'}} />
 						<div className="container">
 							<div className="row">
 								<div className="col-sm-12 text-center front-p">
@@ -444,11 +456,11 @@ class App extends React.Component {
 													<h2 className="white h2-s-1 mb-5">Chicago magazine</h2>
 													<p>It’s an unlikely setting for an exquisite dining experience—served up by a couple straight out of a rom-com plot. </p>
 													<ul className="block-star mt-10">
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star-empty"></i></li>
+														<li className="icon-star" />
+														<li className="icon-star" />
+														<li className="icon-star" />
+														<li className="icon-star" />
+														<li className="icon-star-empty" />
 													</ul>
 												</div>
 											</li>
@@ -608,7 +620,7 @@ class App extends React.Component {
 					</section>
 					<section id="gallery" className="gallery overlay">
 						<h2 className="indent">Gallery</h2>
-						<div className="gallery-slider slider flexslider">
+						<div className="review-slider flexslider">
 							<ul className="slides">
 								<li>
 									<div className="background-img zoom" style={{background: 'url('+ require('../images/11.jpg') + ')'}} />
@@ -661,7 +673,5 @@ class App extends React.Component {
 		);
 	}
 }
-
-// style={{background: 'url('+ require('../images/9.jpg') + ')'}}
 
 export default App;
