@@ -91,57 +91,12 @@ class App extends React.Component {
 							</div>
 						</div>
 					</section>
-					<section id="resto" className="resto pt-120 pb-120">
-						<div className="container">
-							<div className="row">
-								<div className="col-sm-12 text-center mb-100">
-									<h1 className="title">Dereku Burger</h1>
-									<p className="beige">Welcome to Dereku Burger</p>
-								</div>
-							</div>
-						</div>
-						<div className="container">
-							<div className="row vertical-align">
-								<div className="col-md-5 col-sm-5 ">
-									<div className="block-img mb-10">
-										<div className="background-img parallax" style={{background: 'url('+ require('../images/3.jpg') + ')'}} />
-									</div>
-									<div className="block-img ">
-										<div className="background-img" style={{background: 'url('+ require('../images/4.jpg') + ')'}} />
-									</div>
-								</div>
-								<div className="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1  ">
-									<div className="block-content">
-										<h2 className="title-medium mb-10 pb-10">
-											Welcome to Tasty a joyous eatery inspired by  <br />the spirit and culture of italian cuisine.
-											<span className="dots"></span>
-										</h2>
-										<h4 className="title-small">Making delicious italian food since 1990</h4>
-										<p className="puch-right mb-40">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book galley of type and scrambled .</p>
-										<img className="sing" src={require('../images/signature.png')} alt="" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section className="short-reservation pt-200 pb-250 overlay">
-						<div className="background-img zoom" style={{background: 'url('+ require('../images/2.jpg') + ')'}} />
-						<div className="container">
-							<div className="row">
-								<div className="col-sm-12 text-center front-p">
-									<h1 className="large">make a reservation</h1>
-									<p className="lead white top">Opens 8:00 AM - 10:00 PM, every day of the week </p>
-									<a href="#reservation" className="but scroll">Book a table</a>
-								</div>
-							</div>
-						</div>
-					</section>
 					<section id="menu" className="menu pt-120 pb-120 ">
 						<div className="container">
 							<div className="row">
 								<div className="col-sm-12  mb-100 text-center">
-									<h1 className="title"> Tasty menu</h1>
-									<p className="beige">Variety of delicious plate</p>
+									<h1 className="title">Menüü</h1>
+									<p className="beige">Dereku Burgeri Faehlmanni tänava menüü</p>
 								</div>
 							</div>
 						</div>
@@ -149,10 +104,10 @@ class App extends React.Component {
 							<div className="row">
 								<div className="col-sm-12 ">
 									<ul className="block-tabs text-center">
-										<li className="active">Breakfast</li>
-										<li className="">Lunch</li>
-										<li className="">Dessert</li>
-										<li className="">Beverages</li>
+										<li className="active">Burgerid</li>
+										<li className="">Ekstra</li>
+										{/*<li className="">Dessert</li>*/}
+										{/*<li className="">Beverages</li>*/}
 									</ul>
 								</div>
 							</div>
@@ -162,47 +117,53 @@ class App extends React.Component {
 								<ul className="block-tab mt-40">
 									<li className="active block-list">
 										<div className="col-sm-5  col-sm-offset-1 text-center">
-											<div className="block-cat">
-												<h2 className="mb-30">omelettes </h2>
-											</div>
 											<div className="block-content pb-25 mb-25">
-												<h2 className="mb-5 ">Tasty Create an Omelette </h2>
-												<p>Select Any Four of the Following: Bacon, Ham, Sausage, Cheddar.</p>
-												<span className="block-price">$14</span>
+												<h2 className="mb-5 ">Dereku Originaal</h2>
+												<p>Sea-veisekotlett, mitmeviljakukkel seesamiseemnetega, punane grillkaste, Cheddar juust, sinep, marineeritud kurk, punane sibul, tomat, salat-mix, valge kaste</p>
+												<span className="block-price">6&euro;</span>
 												<span className="dots"></span>
 											</div>
 											<div className="block-content  pb-25 mb-25">
-												<h2 className="mb-5 ">Farmhouse Omelette </h2>
-												<p>Sauteed Potatoes, Bacon, Grilled Onions, and Melted Cheese Topped.</p>
-												<span className="block-price ">$14</span>
+												<h2 className="mb-5 ">Lamba burger</h2>
+												<p>Lambakotlet, mitmeviljakukkel seesamiseemnetega, punane grillkaste, Cheddar juust, sinep, marineeritud kurk, punane sibul, tomat, salat-mix, valge kaste</p>
+												<span className="block-price ">8&euro;</span>
 												<span className="dots"></span>
 											</div>
-											<div className="block-content">
-												<h2 className="mb-5 ">Chef's Omelette </h2>
-												<p>Avocado, Mushrooms, Green Onion, Tomato, Garlic and Shallots.</p>
-												<span className="block-price ">$14</span>
+											<div className="block-content pb-25 mb-25">
+												<h2 className="mb-5 ">Kana burger</h2>
+												<p>Kanafilee, &nbsp; mitmeviljakukkel seesamiseemnetega, &nbsp; punane grillkaste, Cheddar juust, &nbsp; ananass, paprika, punane sibul, tomat, salat-mix, valge kaste</p>
+												<span className="block-price ">7&euro;</span>
+												<span className="dots"></span>
+											</div>
+											<div className="block-content pb-25 mb-25">
+												<h2 className="mb-5 ">Veise burger</h2>
+												<p>100% veisekotlet, mitmeviljakukkel seesamiseemnetega, punane grillkaste, Cheddar juust, sinep, marineeritud kurk, punane sibul, tomat, salat-mix, valge kaste</p>
+												<span className="block-price ">7.50&euro;</span>
 											</div>
 										</div>
 										<div className="col-sm-5 text-center ">
-											<div className="block-cat">
-												<h2 className="mb-30">waffle  </h2>
-											</div>
-											<div className="block-content  pb-25 mb-25">
-												<h2 className="mb-5 ">Waffle Brunch </h2>
-												<p>A Small Order of French Toast, Bacon and Strawberries.</p>
-												<span className="block-price ">$14</span>
+											<div className="block-content pb-25 mb-25">
+												<h2 className="mb-5 ">Heavy Duty veise burger</h2>
+												<p>100% veisekotlet, mitmeviljakukkel seesamiseemnetega, punane grillkaste, Cheddar juust, peekon, seened, sinep, marineeritud kurk, punane sibul, tomat, salat-mix, valge kaste</p>
+												<span className="block-price ">8&euro;</span>
 												<span className="dots"></span>
 											</div>
-											<div className="block-content  pb-25 mb-25">
-												<h2 className="mb-5 ">Waffles Benedict </h2>
-												<p>Our Benedict Waffle Topped with Maple-Butter Syrup.</p>
-												<span className="block-price ">$14</span>
+											<div className="block-content pb-25 mb-25">
+												<h2 className="mb-5 ">Põdraliha burger</h2>
+												<p>100% põdraliha kotlet, mitmeviljakukkel seesamiseemnetega, punane grillkaste, pepperoni, peekon, Cheddar juust, marineeritud kurk, punane sibul, tomat, salat-mix, valge kaste</p>
+												<span className="block-price ">10.50&euro;</span>
+												<span className="dots"></span>
+											</div>
+											<div className="block-content pb-25 mb-25">
+												<h2 className="mb-5 ">Veggie burger</h2>
+												<p>Peedi-kikerherne kotlet, roheline mahe mitmeviljakukkel seesamiseemnetega, punane grillkaste, Cheddar juust, sinep, marineeritud kurk, punane sibul, tomat, salat-mix, valge kaste</p>
+												<span className="block-price ">6&euro;</span>
 												<span className="dots"></span>
 											</div>
 											<div className="block-content">
-												<h2 className="mb-5 ">Belgian Waffle  </h2>
-												<p>Available with Strawberries, Pecans and Chantilly Cream.</p>
-												<span className="block-price">$14</span>
+												<h2 className="mb-5 ">Vegan burger</h2>
+												<p>Maisi-kikerherne kotlet, roheline mahe mitmeviljakukkel seesamiseemnetega, Cheddar juust, mahe majonees, ketšup, sinep, tomat ja spinatilehed või salatimix</p>
+												<span className="block-price ">7&euro;</span>
 											</div>
 										</div>
 									</li>
@@ -444,6 +405,51 @@ class App extends React.Component {
 							</div>
 						</div>
 					</section>
+					<section className="short-reservation pt-200 pb-250 overlay">
+						<div className="background-img zoom" style={{background: 'url('+ require('../images/2.jpg') + ')'}} />
+						<div className="container">
+							<div className="row">
+								<div className="col-sm-12 text-center front-p">
+									<h1 className="large">Reserveeri laud</h1>
+									<p className="lead white top">Avatud 11.00 - 22:00, iga päev</p>
+									<a href="#reservation" className="but scroll">Reserveeri</a>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="resto" className="resto pt-120 pb-120">
+						<div className="container">
+							<div className="row">
+								<div className="col-sm-12 text-center mb-100">
+									<h1 className="title">Dereku Burger</h1>
+									<p className="beige">Welcome to Dereku Burger</p>
+								</div>
+							</div>
+						</div>
+						<div className="container">
+							<div className="row vertical-align">
+								<div className="col-md-5 col-sm-5 ">
+									<div className="block-img mb-10">
+										<div className="background-img parallax" style={{background: 'url('+ require('../images/3.jpg') + ')'}} />
+									</div>
+									<div className="block-img ">
+										<div className="background-img" style={{background: 'url('+ require('../images/4.jpg') + ')'}} />
+									</div>
+								</div>
+								<div className="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1  ">
+									<div className="block-content">
+										<h2 className="title-medium mb-10 pb-10">
+											Welcome to Tasty a joyous eatery inspired by  <br />the spirit and culture of italian cuisine.
+											<span className="dots"></span>
+										</h2>
+										<h4 className="title-small">Making delicious italian food since 1990</h4>
+										<p className="puch-right mb-40">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book galley of type and scrambled .</p>
+										<img className="sing" src={require('../images/signature.png')} alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 					<section className="review pt-120 pb-120 overlay">
 						<div className="background-img zoom" style={{background: 'url('+ require('../images/6.jpg') + ')'}} />
 						<div className="container">
@@ -634,40 +640,39 @@ class App extends React.Component {
 							</ul>
 						</div>
 					</section>
-					{/*<section id="contact" className="contact pt-250 pb-250">*/}
-						{/*<h2 className="indent">Contact</h2>*/}
-						{/*<div className="block-map ">*/}
-							{/*<div id="map" className="map"></div>*/}
-						{/*</div>*/}
-						{/*<div className="container block-contact">*/}
-							{/*<div className="row">*/}
-								{/*<div className="col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-7">*/}
-									{/*<ul className="block-social mb-30">*/}
-										{/*<li><a href="#"><i className="icon-facebook"></i></a></li>*/}
-										{/*<li><a href="#"><i className="icon-twitter"></i></a></li>*/}
-										{/*<li><a href="#"><i className="icon-vimeo"></i></a></li>*/}
-									{/*</ul>*/}
-									{/*<div className="block-info mb-30">*/}
-										{/*<p><strong>Opens daily 8:00 AM - 10:00 PM</strong><br />*/}
-											{/*Dear guests, you are welcomed to dine with us at Tasty  restaurant.*/}
-											{/*Have a pleasant dining experience.*/}
-											{/*<br /><br />*/}
-												{/*3805 Edwards Rd <br />*/}
-												{/*Cincinnati, OH 45209 USA<br /><br />*/}
-												{/*Phone: (513) 352-3209 <br />*/}
-												{/*Fax:  (513) 352-6220 <br />*/}
-												{/*Email : <span><a href="mailto:customers@tasty.net">customers@tasty.net</a></span>*/}
-										{/*</p>*/}
-									{/*</div>*/}
-								{/*</div>*/}
-								{/*<div className="col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-7">*/}
-									{/*<footer className="footer-short mt-40">*/}
-										{/*<p>	&copy; 2017 all rights reserved - a product of mutationthemes.</p>*/}
-									{/*</footer>*/}
-								{/*</div>*/}
-							{/*</div>*/}
-						{/*</div>*/}
-					{/*</section>*/}
+					<section id="contact" className="contact pt-250 pb-250">
+						<h2 className="indent">Contact</h2>
+						<div className="block-map ">
+							<div id="map" className="map"></div>
+						</div>
+						<div className="container block-contact">
+							<div className="row">
+								<div className="col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-7">
+									<ul className="block-social mb-30">
+										<li><a href="#"><i className="icon-facebook"></i></a></li>
+										<li><a href="#"><i className="icon-twitter"></i></a></li>
+										<li><a href="#"><i className="icon-vimeo"></i></a></li>
+									</ul>
+									<div className="block-info mb-30">
+										<p><strong>Avatud E-P 11:00 - 22:00</strong><br />
+											Dear guests, you are welcomed to dine with us at Tasty  restaurant.
+											Have a pleasant dining experience.
+											<br /><br />
+												Fr. R. Faehlmanni 3 <br />
+												Tallinn, Eesti<br /><br />
+												Telefon: 5567 2010 <br />
+												Email : <span><a href="mailto:customers@tasty.net">customers@tasty.net</a></span>
+										</p>
+									</div>
+								</div>
+								<div className="col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-7">
+									<footer className="footer-short mt-40">
+										<p>	&copy; 2017 all rights reserved - a product of mutationthemes.</p>
+									</footer>
+								</div>
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
 		);
