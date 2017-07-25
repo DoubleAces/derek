@@ -1,5 +1,7 @@
 import React from 'react';
 import io from 'socket.io-client';
+
+
 require('../style/bootstrap.css');
 require('../style/base.css');
 require('../style/main.css');
@@ -12,6 +14,13 @@ require('../scripts/smooth-scroll');
 require('../scripts/jquery.validate.min');
 require('../scripts/script.js');
 // require('../scripts/placeholders.min');
+
+// import WelcomeToDerek from './WelcomeToDerek';
+// import Reviews from './WelcomeToDerek';
+// import Specials from './Specials';
+// import ReservationForm from './ReservationForm';
+// import Gallery from './Gallery';
+import Contact from './Contact';
 
 import PreLoader from './PreLoader';
 const socket = io.connect('http://localhost:3000');
@@ -405,274 +414,13 @@ class App extends React.Component {
 							</div>
 						</div>
 					</section>
-					<section className="short-reservation pt-200 pb-250 overlay">
-						<div className="background-img zoom" style={{background: 'url('+ require('../images/2.jpg') + ')'}} />
-						<div className="container">
-							<div className="row">
-								<div className="col-sm-12 text-center front-p">
-									<h1 className="large">Reserveeri laud</h1>
-									<p className="lead white top">Avatud 11.00 - 22:00, iga päev</p>
-									<a href="#reservation" className="but scroll">Reserveeri</a>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section id="resto" className="resto pt-120 pb-120">
-						<div className="container">
-							<div className="row">
-								<div className="col-sm-12 text-center mb-100">
-									<h1 className="title">Dereku Burger</h1>
-									<p className="beige">Welcome to Dereku Burger</p>
-								</div>
-							</div>
-						</div>
-						<div className="container">
-							<div className="row vertical-align">
-								<div className="col-md-5 col-sm-5 ">
-									<div className="block-img mb-10">
-										<div className="background-img parallax" style={{background: 'url('+ require('../images/3.jpg') + ')'}} />
-									</div>
-									<div className="block-img ">
-										<div className="background-img" style={{background: 'url('+ require('../images/4.jpg') + ')'}} />
-									</div>
-								</div>
-								<div className="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1  ">
-									<div className="block-content">
-										<h2 className="title-medium mb-10 pb-10">
-											Welcome to Tasty a joyous eatery inspired by  <br />the spirit and culture of italian cuisine.
-											<span className="dots"></span>
-										</h2>
-										<h4 className="title-small">Making delicious italian food since 1990</h4>
-										<p className="puch-right mb-40">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book galley of type and scrambled .</p>
-										<img className="sing" src={require('../images/signature.png')} alt="" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section className="review pt-120 pb-120 overlay">
-						<div className="background-img zoom" style={{background: 'url('+ require('../images/6.jpg') + ')'}} />
-						<div className="container">
-							<div className="row">
-								<div className="col-sm-12 text-center front-p">
-									<div className="review-slider flexslider">
-										<ul className="slides">
-											<li>
-												<div className="block-review">
-													<h2 className="white h2-s-1 mb-5">Chicago magazine</h2>
-													<p>It’s an unlikely setting for an exquisite dining experience—served up by a couple straight out of a rom-com plot. </p>
-													<ul className="block-star mt-10">
-														<li className="icon-star" />
-														<li className="icon-star" />
-														<li className="icon-star" />
-														<li className="icon-star" />
-														<li className="icon-star-empty" />
-													</ul>
-												</div>
-											</li>
-											<li>
-												<div className="block-review">
-													<h2 className="white h2-s-1 mb-5">The telegraph</h2>
-													<p>The food is plentiful and delicious, it is all part of the "old world" sort of dining experience. </p>
-													<ul className="block-star mt-10">
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star-empty"></i></li>
-														<li><i className="icon-star-empty"></i></li>
-													</ul>
-												</div>
-											</li>
-											<li>
-												<div className="block-review">
-													<h2 className="white h2-s-1 mb-5">Magazin restaurant</h2>
-													<p>Huge portions, great food, fast service. This location obviously is always packed due to being in Times Sq. </p>
-													<ul className="block-star mt-10">
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star"></i></li>
-														<li><i className="icon-star-half"></i></li>
-													</ul>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section  id="special" className="special pt-120 pb-120">
-						<div className="container">
-							<div className="row">
-								<div className="col-sm-12 text-center mb-100">
-									<h1 className="title">Today's special</h1>
-									<p className="beige">Special plate by the chef</p>
-								</div>
-							</div>
-						</div>
-						<div className=" container">
-							<div className="row">
-								<div className="col-md-4  pd-0 block-special">
-									<div className="block-img special">
-										<div className="background-img" style={{background: 'url('+ require('../images/7.jpg') + ')'}} />
-									</div>
-									<div className="block-content special sp-1">
-										<h2 className="mb-5  h2-s-1">Pepperoni Pasta  </h2>
-										<p>Mango, Passion Fruit, Pineapple and Coconut All Blended with Ice.</p>
-										<span className="block-price special">$14</span>
-										<span className="block-border "></span>
-									</div>
-								</div>
-								<div className="col-md-4  pd-0 block-special active ">
-									<div className="block-img special">
-										<div className="background-img" style={{background: 'url('+ require('../images/8.jpg') + ')'}} />
-									</div>
-									<div className="block-content special sp-2">
-										<h2 className="mb-5  h2-s-1">Mushroom steak  </h2>
-										<p>Mango, Passion Fruit, Pineapple and Coconut All Blended with Ice.</p>
-										<span className="block-price special">$55</span>
-									</div>
-								</div>
-								<div className="col-md-4  pd-0 block-special">
-									<div className="block-img special">
-										<div className="background-img" style={{background: 'url('+ require('../images/9.jpg') + ')'}} />
-									</div>
-									<div className="block-content special sp-3">
-										<h2 className="mb-5  h2-s-1">Ham Benedict  </h2>
-										<p>Mango, Passion Fruit, Pineapple and Coconut All Blended with Ice.</p>
-										<span className="block-price special">$34</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section id="reservation" className="reservation pt-140 pb-140 bg-grey">
-						<div className="container">
-							<div className="row">
-								<div className="col-sm-8 col-sm-offset-2 text-center mb-100">
-									<h1 className="title">reservation</h1>
-									<p className="beige">Book a table</p>
-									<p className="title-lead  mt-20">
-										Please choose your reservation date with specific time and number<br />
-										of people to book a table
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="container">
-							<div className="row">
-								<div className="col-sm-8 col-sm-offset-2">
-									<div className="block-form">
-										<form className="reservation-form " method="post" action="send.php">
-											<div className="block-input ico-input">
-												<i className="icon-user-1"></i>
-												<label>Your name:</label>
-												<input  id="name" name="name" type="text" required />
-											</div>
-											<div className="block-input ico-input">
-												<i className="icon-phone"></i>
-												<label>Your Phone:</label>
-												<input  id="phone" name="phone" type="text" />
-											</div>
-											<div className="block-input ico-input">
-												<i className="icon-mail-1"></i>
-												<label>Your Email:</label>
-												<input  id="email" name="email" type="text" />
-											</div>
-											<div className="input-columns block-input clearfix">
-												<div className="column-1">
-													<div className="column-inner">
-														<label>Number of person :  </label>
-														<input id="person" min="1" name="person"  type="number" required />
-													</div>
-												</div>
-												<div className="column-2">
-													<div className="column-inner">
-														<label>Type of table:</label>
-														<input id="table" min="1" name="table" type="number" required />
-													</div>
-												</div>
-											</div>
-											<div className="input-columns block-input clearfix">
-												<div className="column-1">
-													<div className="column-inner ico-input">
-														<i className="icon-calendar"></i>
-														<label>Date :  </label>
-														<input className="date" id="date" name="date" type="date" required />
-													</div>
-												</div>
-												<div className="column-2">
-													<div className="column-inner ico-input">
-														<i className="icon-clock"></i>
-														<label>Time:</label>
-														<input placeholder="(ex: 7:00 p.m)"  id="time" name="time" type="text" required />
-													</div>
-												</div>
-											</div>
-											<button  className=" but submit" type="submit">Book a table</button>
-											
-											<div className="success-msg">
-												<h2>Your message has been sent. Thank you!</h2>
-											</div>
-											<div className="error-msg">
-												<h2>Sorry your message can not be sent.</h2>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section id="gallery" className="gallery overlay">
-						<h2 className="indent">Gallery</h2>
-						<div className="review-slider flexslider">
-							<ul className="slides">
-								<li>
-									<div className="background-img zoom" style={{background: 'url('+ require('../images/11.jpg') + ')'}} />
-								</li>
-								<li>
-									<div className="background-img zoom" style={{background: 'url('+ require('../images/12.jpg') + ')'}} />
-								</li>
-								<li>
-									<div className="background-img zoom" style={{background: 'url('+ require('../images/13.jpg') + ')'}} />
-								</li>
-							</ul>
-						</div>
-					</section>
-					<section id="contact" className="contact pt-250 pb-250">
-						<h2 className="indent">Contact</h2>
-						<div className="block-map ">
-							<div id="map" className="map"></div>
-						</div>
-						<div className="container block-contact">
-							<div className="row">
-								<div className="col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-7">
-									<ul className="block-social mb-30">
-										<li><a href="#"><i className="icon-facebook"></i></a></li>
-										<li><a href="#"><i className="icon-twitter"></i></a></li>
-										<li><a href="#"><i className="icon-vimeo"></i></a></li>
-									</ul>
-									<div className="block-info mb-30">
-										<p><strong>Avatud E-P 11:00 - 22:00</strong><br />
-											Dear guests, you are welcomed to dine with us at Tasty  restaurant.
-											Have a pleasant dining experience.
-											<br /><br />
-												Fr. R. Faehlmanni 3 <br />
-												Tallinn, Eesti<br /><br />
-												Telefon: 5567 2010 <br />
-												Email : <span><a href="mailto:customers@tasty.net">customers@tasty.net</a></span>
-										</p>
-									</div>
-								</div>
-								<div className="col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-7">
-									<footer className="footer-short mt-40">
-										<p>	&copy; 2017 all rights reserved - a product of mutationthemes.</p>
-									</footer>
-								</div>
-							</div>
-						</div>
-					</section>
+					{/*<ReserveBanner />*/}
+					{/*<WelcomeToDerek />*/}
+					{/*<Reviews />*/}
+					{/*<Specials />*/}
+					{/*<ReservationForm />*/}
+					{/*<Gallery />*/}
+					<Contact />
 				</div>
 			</div>
 		);
