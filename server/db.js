@@ -10,11 +10,11 @@ function connect(url) {
 	
 	MongoClient.connect(url, function(err, db) {
 		if (err) {
-			throw new Error(err)
+			throw new Error(err);
 		}
 		console.log('Database connection established');
 		state.db = db;
-	})
+	});
 }
 
 function get() {
